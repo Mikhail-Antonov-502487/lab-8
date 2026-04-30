@@ -10,14 +10,14 @@ def main():
         print("Убедитесь, что файл находится в папке с программой")
         return
     
-    # 2. Загружаем и преобразуем метку (по заданию 7 варианта)
+    # 2. Загружаем и преобразуем изображение (по заданию 7 варианта)
     marker_img = cv2.imread('variant-7.jpg')
     
     if marker_img is None:
         print("Ошибка: не удалось загрузить изображение метки")
         return
     
-    # Отражаем метку по заданию
+    # Отражаем изображение по заданию
     marker_transformed = cv2.flip(marker_img, -1)
     cv2.imwrite('marker_transformed.jpg', marker_transformed)
     print("Изображение метки преобразовано (отражение по обеим осям)")
