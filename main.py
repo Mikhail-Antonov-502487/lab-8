@@ -14,13 +14,13 @@ def main():
     marker_img = cv2.imread('variant-7.jpg')
     
     if marker_img is None:
-        print("Ошибка: не удалось загрузить изображение метки")
+        print("Ошибка: не удалось загрузить изображение")
         return
     
     # Отражаем изображение по заданию
     marker_transformed = cv2.flip(marker_img, -1)
     cv2.imwrite('marker_transformed.jpg', marker_transformed)
-    print("Изображение метки преобразовано (отражение по обеим осям)")
+    print("Изображение преобразовано (отражение по обеим осям)")
     
     # 3. Открываем камеру
     cap = cv2.VideoCapture(0)
